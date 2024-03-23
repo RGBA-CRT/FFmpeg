@@ -47,6 +47,7 @@ trap 'rm -f -- $libname' EXIT
 
 if [ -n "$AR" ]; then
     $AR rcs ${libname} $@ >/dev/null
+    i686-w64-mingw32-ar rcs ${libname} $@ >/dev/null
 else
     lib.exe -out:${libname} $@ >/dev/null
 fi
